@@ -18,6 +18,10 @@ public class GreetingController {
     public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
         return new Greeting(counter.incrementAndGet(), String.format(template, name));
     }
+    @GetMapping("/greetingf")
+    public Greeting greetingf(@RequestParam(value = "name", defaultValue = "Home") String name) {
+        return new Greeting(counter.incrementAndGet(), String.format(template, name));
+    }
 }
 
 
