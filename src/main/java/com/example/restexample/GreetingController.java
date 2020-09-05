@@ -23,7 +23,14 @@ public class GreetingController {
     public Greeting greetings(@RequestParam(value = "name", defaultValue = "World") String name) {
         return new Greeting(counter.incrementAndGet(), String.format(template, name));
     }
-
+    @GetMapping("/greetingsf")
+    public Greeting greetingsf(@RequestParam(value = "name", defaultValue = "World") String name) {
+        return new Greeting(counter.incrementAndGet(), String.format(template, name));
+    }
+    @GetMapping("/greetingst")
+    public Greeting greetingst(@RequestParam(value = "name", defaultValue = "World") String name) {
+        return new Greeting(counter.incrementAndGet(), String.format(template, name));
+    }
 }
 
 
